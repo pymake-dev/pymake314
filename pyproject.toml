@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymake314"
+version = "1.0.0"
+description = "A pure-Python Makefile interpreter — use make without installing make"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["make", "makefile", "build", "build-tool", "automation", "devops", "ci"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/pymake-dev/pymake314"
+Repository = "https://github.com/pymake-dev/pymake314"
+Issues = "https://github.com/pymake-dev/pymake314/issues"
+Changelog = "https://github.com/pymake-dev/pymake314/blob/main/CHANGELOG.md"
+
+[project.scripts]
+pymake = "pymake:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pymake*"]
+
+[tool.setuptools.package-data]
+pymake = ["py.typed"]
